@@ -1029,9 +1029,9 @@
   integrity sha512-bQl6mk1SrcmrDL+F4XTeZtW2JnqgNJx5pNX6PIfWe5QA+J2blLlYbwDQOvjovpZEirwy8iqQmu//6bKjaDu1ow==
 
 "@cspell/dict-companies@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-companies/-/dict-companies-3.0.1.tgz#7df249fdf3a9b4024891e7c18d9a60c95db8e9f0"
-  integrity sha512-esgKy0UkWIK1lyRaN9XtbRZZJiJ0tLlfyLkaZ3s0OubsAsSH6hgM6nc2p1IbmyhsFaEfp645z+YneBuOTL35Rw==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-companies/-/dict-companies-3.0.2.tgz#f99a09d35b2c719c2610f041514c34e932de0410"
+  integrity sha512-C+H3tltzEZrPFEgLjKPM796ZQyFv2wW/FmOrkvoL5iyiwdQFg8Nh3KTPTZT83QJa4nb+yTHw0X/c+6QyEuzODA==
 
 "@cspell/dict-cpp@^4.0.0":
   version "4.0.0"
@@ -1039,14 +1039,14 @@
   integrity sha512-NrCmer14tTSbPs1TwqyCjFEmWCBw0UFvAn4O3pdWuxktArHxRJ5vUQOoL2Gus2H9s3ihhOJZkcuJ47Kd21E7BQ==
 
 "@cspell/dict-cryptocurrencies@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-cryptocurrencies/-/dict-cryptocurrencies-3.0.0.tgz#5b6645a9ac824a30454a8b9e49b5fc0862d411c3"
-  integrity sha512-5/tAqEVcg3PP1ZiSunxSVX1h5jGGS9ulSQFhPlXswmRRlo0Bry7ZP6Am81TiPG0bvkRvKb8eA9N5z212q6UTcg==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-cryptocurrencies/-/dict-cryptocurrencies-3.0.1.tgz#de1c235d6427946b679d23aacff12fea94e6385b"
+  integrity sha512-Tdlr0Ahpp5yxtwM0ukC13V6+uYCI0p9fCRGMGZt36rWv8JQZHIuHfehNl7FB/Qc09NCF7p5ep0GXbL+sVTd/+w==
 
 "@cspell/dict-csharp@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-csharp/-/dict-csharp-4.0.0.tgz#e5c829b084cb7d279c5ffc80e3542a2252697e85"
-  integrity sha512-B6Ss3sMrkFRJFQCZ7F49yJzDZ6izpQTgNLEmuYIt0o6ZLsSvy5JDC3+F2rYfpsFESQIU/4GbqWZPTs7C9WvBeg==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-csharp/-/dict-csharp-4.0.1.tgz#7eeb14b8f324d32df03d76a8b72cde2209944c44"
+  integrity sha512-BkfT6S790FcyWLTWYBwkj9dKxuNz4pHFDrj9GFrmqXd2HWzfSa944S0NJhal42TnW30JJljQY5P1ZYau+s2Pbg==
 
 "@cspell/dict-css@^3.0.0":
   version "3.0.0"
@@ -1069,9 +1069,9 @@
   integrity sha512-UEYoeRDm7oUN9yz1mYSozz6D4+2N14S/cd2Re9et6Xzq6yi62s4ky3knF92Of2weelADjnN41UA22VBhRAf7Sw==
 
 "@cspell/dict-dotnet@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-dotnet/-/dict-dotnet-3.0.0.tgz#eeef16909c843540236ba9a64bfb5f4e781a4def"
-  integrity sha512-RqZ+WbkT+/JaR4RPbtyohlkZSd6FSOGT/Bu4yYQN2X06Vlk5rvy/dYSQWk2t3d1qJFq5EO0m8eTs7IOOnBF33Q==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-dotnet/-/dict-dotnet-3.0.1.tgz#df757965ae0396d48a3c65815b53f8fbe2104b6c"
+  integrity sha512-Flruqsmhwrm1K2+HKsA4I6aywmsM5QnCddFb8FIQLgluyuTss6Hs1Xj380+k3PeU/wAg4xNTD7f6b4xxZLbfjw==
 
 "@cspell/dict-elixir@^3.0.0":
   version "3.0.0"
@@ -1159,9 +1159,9 @@
   integrity sha512-jNKImVG5ZX+Pp6PhbSR3TmC9+0ROx09dGhSgUsZyvXV5CGEr+OQGJtNL98TGwU3pP2Xjc++qnHA/XPwB5WvLfA==
 
 "@cspell/dict-php@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-php/-/dict-php-3.0.1.tgz#e343a542501980d44122d29995006d0b943013a9"
-  integrity sha512-KSUMyb92nq9P9u/RgNvve/X7oIrGGwUh6eu6NSQgSL4HhWn/Ux4unXrLxrcOUKKkmnkU31Kd/WDPJSuDJrD+AQ==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-php/-/dict-php-3.0.2.tgz#4384f490fe6345f7a36f8102d5944c20f6a99d85"
+  integrity sha512-YIVkqey40oNUem3aNvpyanhlmddUpogSAA51VcQkfB93qbjMzAQTvLBYJ9muPpyZgFF+TLTKdsrlqRLeKGsjow==
 
 "@cspell/dict-powershell@^3.0.0":
   version "3.0.0"
@@ -1199,9 +1199,9 @@
   integrity sha512-sIiCQDIMMnNns/fzD61z5npbh5pypaKq07Orqe0+eRfdQpika8iRSGUGFHVbtdd1JzB1DyTCV2e8OwdaQiXqJQ==
 
 "@cspell/dict-software-terms@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-software-terms/-/dict-software-terms-3.0.1.tgz#3a118b9b228ebef8938a21bc6176f2cf66d05341"
-  integrity sha512-un5lbB+cM750HCVmW/9FaNXpr3tSCYkiOQUEo2GPwX96BWsFgkxRj24Ah23jIt1rOqVLpYZNgbslqiG1NKVgVg==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-software-terms/-/dict-software-terms-3.0.2.tgz#4de9e73b9019ff9165a9ef04371b9d7a74270fee"
+  integrity sha512-TR92ZKyCarEzvLbG/q/HNqSDHSiJOYCU/RiankMU8R8nqY9K9k0k+vWMlgYpl2UXgXNdYjNP6RfZdtUR9jD55w==
 
 "@cspell/dict-sql@^2.0.0":
   version "2.0.0"
