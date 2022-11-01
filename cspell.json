@@ -8,6 +8,7 @@
     "commitlint",
     "gradlew",
     "Haptics",
+    "iban",
     "mmkv",
     "mvvm",
     "Parens",

@@ -1,32 +1,39 @@
 import {api} from '@config';
-import {TProduct} from './types';
+import {COLLECTION} from './constants';
+import {TUser, TUsers} from './types';
 
-export const getAll = async () => {
-  const {data} = await api.get('/products');
-
-  return data;
-};
-
-export const getOne = async (id: string) => {
-  const {data} = await api.get(`/products/${id}`);
+export const getAll = async (): Promise<TUsers> => {
+  const {data}: {data: TUsers} = await api.get(`/${COLLECTION}`);
 
   return data;
 };
 
-export const addOne = async (payload: TProduct) => {
-  const {data} = await api.post('/products/add', JSON.stringify(payload));
+export const getOne = async (id: string): Promise<TUser> => {
+  const {data}: {data: TUser} = await api.get(`/${COLLECTION}/${id}`);
 
   return data;
 };
 
-export const updateOne = async (id: string, payload: TProduct) => {
-  const {data} = await api.put(`/products/${id}`, JSON.stringify(payload));
+export const addOne = async (payload: TUser): Promise<TUser> => {
+  const {data}: {data: TUser} = await api.post(
+    `/${COLLECTION}/add`,
+    JSON.stringify(payload),
+  );
 
   return data;
 };
 
-export const deleteOne = async (id: string) => {
-  const {data} = await api.delete(`/products/${id}`);
+export const updateOne = async (id: string, payload: TUser): Promise<TUser> => {
+  const {data}: {data: TUser} = await api.put(
+    `/${COLLECTION}/${id}`,
+    JSON.stringify(payload),
+  );
+
+  return data;
+};
+
+export const deleteOne = async (id: string): Promise<TUser> => {
+  const {data}: {data: TUser} = await api.delete(`/${COLLECTION}/${id}`);
 
   return data;
 };
