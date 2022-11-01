@@ -1,5 +1,5 @@
 import {api} from '@config';
-import {TUser, TUsers} from 'Data/types/User.types';
+import {TUser, TUsers} from 'types/User.types';
 import {COLLECTION} from './constants';
 
 export const getAll = async (): Promise<TUsers> => {

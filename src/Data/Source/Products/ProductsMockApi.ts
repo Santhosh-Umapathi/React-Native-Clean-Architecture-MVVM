@@ -1,4 +1,4 @@
-import {TProduct, TProducts} from 'Data/types/Product.types';
+import {TProduct, TProducts} from 'types/Product.types';
 import mockProductDb from './json/mockProduct.json';
 import mockProductsDb from './json/mockProducts.json';
 

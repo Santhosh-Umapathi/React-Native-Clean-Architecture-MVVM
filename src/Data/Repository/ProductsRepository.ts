@@ -1,5 +1,5 @@
+import {TProduct} from 'types/Product.types';
 import {ProductsApi} from 'Data/source';
-import {TProduct} from 'Data/types/Product.types';
 
 export const getProducts = async () => {
   return await ProductsApi.getAll();

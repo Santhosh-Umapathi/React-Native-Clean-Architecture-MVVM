@@ -1,5 +1,5 @@
 import {api} from '@config';
-import {TProduct, TProducts} from 'Data/types/Product.types';
+import {TProduct, TProducts} from 'types/Product.types';
 import {COLLECTION} from './constants';
 
 export const getAll = async (): Promise<TProducts> => {
