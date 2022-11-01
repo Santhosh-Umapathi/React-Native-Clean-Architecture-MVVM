@@ -1,6 +1,6 @@
 import {api} from '@config';
+import {TUser, TUsers} from 'Data/types/User.types';
 import {COLLECTION} from './constants';
-import {TUser, TUsers} from './types';
 
 export const getAll = async (): Promise<TUsers> => {
   const {data}: {data: TUsers} = await api.get(`/${COLLECTION}`);

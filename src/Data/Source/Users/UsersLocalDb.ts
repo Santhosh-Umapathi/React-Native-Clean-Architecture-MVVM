@@ -1,6 +1,6 @@
+import {TUser, TUsers} from 'Data/types/User.types';
 import userDb from './json/user.json';
 import usersDb from './json/users.json';
-import {TUser, TUsers} from './types';
 
 export const getAll = async (): Promise<TUsers> => {
   const data: TUsers = await usersDb;

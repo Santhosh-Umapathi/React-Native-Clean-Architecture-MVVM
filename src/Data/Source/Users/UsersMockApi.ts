@@ -1,6 +1,6 @@
+import {TUser, TUsers} from 'Data/types/User.types';
 import mockUser from './json/mockUser.json';
 import mockUsers from './json/mockUsers.json';
-import {TUser, TUsers} from './types';
 
 export const getAll = async (): Promise<TUsers> => {
   const data: TUsers = await mockUsers;
