@@ -5,8 +5,8 @@ import {NavigationHeader} from '../screens/Users/UsersList/NavigationHeader';
 
 export type UsersStackParamList = {
   UsersList: undefined;
-  UserDetail: {id: string};
-  AddUser: undefined;
+  UserDetail: {id?: string};
+  AddUser: {id?: string};
 };
 const Stack = createNativeStackNavigator<UsersStackParamList>();
 

@@ -1,22 +1,21 @@
 import {useState} from 'react';
-import {UsersStackParamList} from 'src/Presentation/navigation/UsersStack';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import jsonData from '../../../../Data/source/Users/json/user.json';
-import {addUser} from '../../../../Domain/Users';
+import {addUser, deleteUser, updateUser} from '../../../../Domain/Users';
 import TProps from './types';
 import useAddUserViewModel from './ViewModel';
 
-const useAddUserViewController = () => {
-  const {addUserHandler} = useAddUserViewModel();
+const useAddUserViewController = ({navigation, route}) => {
+  const {addUserHandler, users, deleteUserHandler, editUserHandler} =
+    useAddUserViewModel();
 
-  const {goBack} =
-    useNavigation<
-      NativeStackScreenProps<UsersStackParamList, 'UsersList'>['navigation']
-    >();
+  // const {navigation, route} =
+  //   useNavigation<NativeStackScreenProps<UsersStackParamList, 'AddUser'>>();
 
-  const [firstName, setFirstName] = useState('');
-  const [address, setAddress] = useState('');
+  const id = route?.params?.id;
+  const user = users.users.find(i => String(i.id) === id);
+
+  const [firstName, setFirstName] = useState(user?.firstName || '');
+  const [address, setAddress] = useState(user?.domain || '');
 
   const onChangeFirstName = (text: string) => {
     setFirstName(text);
@@ -35,36 +34,28 @@ const useAddUserViewController = () => {
     });
     results && addUserHandler(results);
 
-    goBack();
+    navigation.goBack();
   };
 
-  const editHandler = () => {
-    console.log('edit');
+  const editHandler = async () => {
+    const {results} = await updateUser(String(user?.id), {
+      ...jsonData,
+      id: String(user?.id),
+      firstName,
+      domain: address,
+      image: 'https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg',
+    });
+    results && editUserHandler(results);
+
+    navigation.goBack();
   };
 
-  const deleteHandler = () => {
-    console.log('delete');
+  const deleteHandler = async () => {
+    const {results} = await deleteUser(String(user?.id));
+    results && deleteUserHandler(results);
+
+    navigation.goBack();
   };
-
-  const imageUrl = undefined;
-
-  //   const {updateUsers, users} = useUsersListViewModel();
-  //
-  //   const getUsersCallback = async () => {
-  //     const {results} = await getUsers();
-  //     results && updateUsers(results);
-  //   };
-  //   useFocusEffect(
-  //     useCallback(() => {
-  //       getUsersCallback();
-  //     }, []),
-  //   );
-  //   const onPressItem = (id: string) => {
-  //     navigate('UserDetail', {id});
-  //   };
-  //   const onPressAdd = () => {
-  //     navigate('AddUser');
-  //   };
 
   return {
     firstName,
@@ -72,7 +63,7 @@ const useAddUserViewController = () => {
     onChangeFirstName,
     onChangeAddress,
     saveHandler,
-    imageUrl,
+    imageUrl: user?.image,
     editHandler,
     deleteHandler,
   };

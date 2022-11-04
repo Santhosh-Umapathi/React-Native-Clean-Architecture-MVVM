@@ -17,7 +17,10 @@ const AddUser = (props: TProps) => {
     editHandler,
     deleteHandler,
     imageUrl,
-  } = useAddUserViewController();
+  } = useAddUserViewController({
+    navigation: props.navigation,
+    route: props.route,
+  });
 
   return (
     <View style={styles.container}>
@@ -59,7 +62,7 @@ const AddUser = (props: TProps) => {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={deleteHandler}>
+          <TouchableOpacity onPress={deleteHandler} style={styles.deleteButton}>
             <Image
               source={deleteIcon}
               style={styles.saveIcon}

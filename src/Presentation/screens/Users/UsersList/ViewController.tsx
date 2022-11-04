@@ -26,11 +26,11 @@ const useUsersListViewController = () => {
   );
 
   const onPressItem = (id: string) => {
-    navigate('UserDetail', {id});
+    navigate('AddUser', {id});
   };
 
   const onPressAdd = () => {
-    navigate('AddUser');
+    navigate('AddUser', {});
   };
 
   return {users, onPressItem, onPressAdd};

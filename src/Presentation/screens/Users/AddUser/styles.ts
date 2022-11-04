@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 50,
+    flexDirection: 'row',
   },
   imageContainer: {
     width: '100%',
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 20,
   },
+  deleteButton: {marginLeft: 50},
 });
 
 export default styles;

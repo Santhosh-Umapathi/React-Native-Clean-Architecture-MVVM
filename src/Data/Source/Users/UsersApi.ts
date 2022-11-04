@@ -29,7 +29,7 @@ export const updateOne = async (id: string, payload: TUser): Promise<TUser> => {
     JSON.stringify(payload),
   );
 
-  return data;
+  return payload;
 };
 
 export const deleteOne = async (id: string): Promise<TUser> => {
