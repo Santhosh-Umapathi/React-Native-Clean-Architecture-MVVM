@@ -1,10 +1,12 @@
-const useHomeViewController = () => {
+import TProps from './types';
+
+const useHomeViewController = (navigation: TProps['navigation']) => {
   const onUsersPress = () => {
-    console.log('users pressed');
+    navigation.navigate('UsersStack');
   };
 
   const onProductsPress = () => {
-    console.log('products pressed');
+    navigation.navigate('ProductsStack');
   };
 
   return {onUsersPress, onProductsPress};

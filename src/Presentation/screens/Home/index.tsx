@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
 import TProps from './types';
 import useHomeViewController from './ViewController';
 
-const Home = () => {
-  const {onProductsPress, onUsersPress} = useHomeViewController();
+const Home: FC<TProps> = ({navigation}) => {
+  const {onProductsPress, onUsersPress} = useHomeViewController(navigation);
 
   return (
     <View style={styles.container}>

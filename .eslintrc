@@ -13,7 +13,7 @@
   "rules": {
     "semi": ["error", "always"],
     "no-relative-import-paths/no-relative-import-paths": [
-      "error",
+      "warn",
       {"allowSameFolder": true, "rootDir": "src"}
     ],
     "unused-imports/no-unused-imports": "error",
