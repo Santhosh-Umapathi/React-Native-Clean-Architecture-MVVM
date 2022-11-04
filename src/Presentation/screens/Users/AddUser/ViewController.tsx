@@ -4,15 +4,16 @@ import {addUser, deleteUser, updateUser} from '../../../../Domain/Users';
 import TProps from './types';
 import useAddUserViewModel from './ViewModel';
 
-const useAddUserViewController = ({navigation, route}) => {
+const useAddUserViewController = ({navigation, route}: TProps) => {
   const {addUserHandler, users, deleteUserHandler, editUserHandler} =
     useAddUserViewModel();
 
-  // const {navigation, route} =
-  //   useNavigation<NativeStackScreenProps<UsersStackParamList, 'AddUser'>>();
-
   const id = route?.params?.id;
   const user = users.users.find(i => String(i.id) === id);
+
+  if (user) {
+    navigation.setOptions({title: 'Edit User'});
+  }
 
   const [firstName, setFirstName] = useState(user?.firstName || '');
   const [address, setAddress] = useState(user?.domain || '');
