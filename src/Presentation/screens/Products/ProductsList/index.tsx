@@ -5,15 +5,14 @@ import TProps from './types';
 import useProductsListViewController from './ViewController';
 
 const ProductsList = (props: TProps) => {
-  const {products, onPressItem} = useProductsListViewController();
-  console.log('🔥 --- ProductsList --- products', products.products[1]);
+  const {products, onPressItem, users} = useProductsListViewController();
 
   return (
     <FlatList
       style={styles.container}
       data={products.products}
       keyExtractor={key => String(key.id)}
-      renderItem={({item}) => {
+      renderItem={({item, index}) => {
         return (
           <TouchableOpacity
             onPress={() => onPressItem(String(item.id))}
@@ -32,6 +31,9 @@ const ProductsList = (props: TProps) => {
               <Text style={styles.userText}>{item.title}</Text>
               <Text style={styles.userText} numberOfLines={2}>
                 {item.description}
+              </Text>
+              <Text style={styles.userText} numberOfLines={2}>
+                User:{users[index]?.firstName}
               </Text>
             </View>
           </TouchableOpacity>

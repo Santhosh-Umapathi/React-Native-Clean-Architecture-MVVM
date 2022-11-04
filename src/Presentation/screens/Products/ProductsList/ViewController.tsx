@@ -6,7 +6,7 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import useProductsListViewModel from './ViewModel';
 
 const useProductsListViewController = () => {
-  const {updateProducts, products} = useProductsListViewModel();
+  const {updateProducts, products, users} = useProductsListViewModel();
 
   const {navigate} =
     useNavigation<
@@ -32,7 +32,7 @@ const useProductsListViewController = () => {
     navigate('AddProduct', {});
   };
 
-  return {products, onPressItem, onPressAdd};
+  return {products, onPressItem, onPressAdd, users};
 };
 
 export default useProductsListViewController;
