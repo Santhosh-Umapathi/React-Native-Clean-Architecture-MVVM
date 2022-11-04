@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   },
   textContainer: {flexDirection: 'column'},
   card: {backgroundColor: 'white'},
+  addIcon: {width: 25, height: 25},
 });
 
 export default styles;

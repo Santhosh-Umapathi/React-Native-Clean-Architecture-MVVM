@@ -29,7 +29,11 @@ const useUsersListViewController = () => {
     navigate('UserDetail', {id});
   };
 
-  return {users, onPressItem};
+  const onPressAdd = () => {
+    navigate('AddUser');
+  };
+
+  return {users, onPressItem, onPressAdd};
 };
 
 export default useUsersListViewController;
