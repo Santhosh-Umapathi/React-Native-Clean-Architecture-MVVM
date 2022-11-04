@@ -20,7 +20,7 @@ export const addOne = async (payload: TUser): Promise<TUser> => {
     JSON.stringify(payload),
   );
 
-  return data;
+  return payload;
 };
 
 export const updateOne = async (id: string, payload: TUser): Promise<TUser> => {

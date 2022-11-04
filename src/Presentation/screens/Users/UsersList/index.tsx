@@ -6,6 +6,7 @@ import useUsersListViewController from './ViewController';
 
 const UsersList = (props: TProps) => {
   const {users, onPressItem} = useUsersListViewController();
+
   return (
     <FlatList
       style={styles.container}
@@ -18,7 +19,11 @@ const UsersList = (props: TProps) => {
             style={styles.userCard}
           >
             <Image
-              source={{uri: item.image}}
+              source={{
+                uri:
+                  item.image ||
+                  'https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg',
+              }}
               style={styles.image}
               resizeMode="contain"
             />

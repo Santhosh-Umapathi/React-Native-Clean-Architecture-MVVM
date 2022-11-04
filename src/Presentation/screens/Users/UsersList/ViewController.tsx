@@ -21,7 +21,7 @@ const useUsersListViewController = () => {
 
   useFocusEffect(
     useCallback(() => {
-      getUsersCallback();
+      users.users.length < 1 && getUsersCallback();
     }, []),
   );
 
