@@ -6,6 +6,7 @@ export default () => {
   const [products, updateProducts] = useRecoilState(ProductsState.products);
 
   const setProducts = (payload: TProducts) => {
+    console.log('🔥 --- setProducts --- payload', payload.products[1]);
     updateProducts(payload);
   };
 

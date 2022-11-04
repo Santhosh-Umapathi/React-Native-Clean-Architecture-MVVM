@@ -20,7 +20,7 @@ export const addOne = async (payload: TProduct): Promise<TProduct> => {
     JSON.stringify(payload),
   );
 
-  return data;
+  return payload;
 };
 
 export const updateOne = async (
@@ -32,7 +32,7 @@ export const updateOne = async (
     JSON.stringify(payload),
   );
 
-  return data;
+  return payload;
 };
 
 export const deleteOne = async (id: string): Promise<TProduct> => {

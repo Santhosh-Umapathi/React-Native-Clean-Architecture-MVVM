@@ -22,7 +22,7 @@ const useUsersListViewController = () => {
   useFocusEffect(
     useCallback(() => {
       users.users.length < 1 && getUsersCallback();
-    }, []),
+    }, [users.users.length]),
   );
 
   const onPressItem = (id: string) => {

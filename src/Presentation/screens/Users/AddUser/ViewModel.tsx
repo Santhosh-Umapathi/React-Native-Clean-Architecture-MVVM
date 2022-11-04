@@ -15,7 +15,7 @@ const useAddUserViewModel = () => {
 
   const editUserHandler = (payload: TUser) => {
     const oldState = [...state.users.users];
-    const index = oldState.findIndex(i => i.id === +payload.id);
+    const index = oldState.findIndex(i => String(i.id) === payload.id);
     oldState[index] = payload;
 
     actions.setUsers({...state.users, users: oldState});
@@ -23,7 +23,7 @@ const useAddUserViewModel = () => {
 
   const deleteUserHandler = (payload: TUser) => {
     const oldState = [...state.users.users];
-    const index = oldState.findIndex(i => i.id === payload.id);
+    const index = oldState.findIndex(i => String(i.id) === payload.id);
     oldState.splice(index, 1);
 
     actions.setUsers({...state.users, users: oldState});
