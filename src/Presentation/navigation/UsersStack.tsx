@@ -2,12 +2,12 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {AddUser, UserDetail, UsersList} from '../screens/Users';
 
-type RootStackParamList = {
+export type UsersStackParamList = {
   UsersList: undefined;
-  UserDetail: undefined;
+  UserDetail: {id: string};
   AddUser: undefined;
 };
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<UsersStackParamList>();
 
 const UsersStack = () => {
   return (

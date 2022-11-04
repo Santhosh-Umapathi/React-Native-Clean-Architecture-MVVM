@@ -5,7 +5,8 @@ export default async () => {
   try {
     results = await UsersRepository.getUsers();
   } catch (err) {
-    console.log('🔥 --- error', error);
+    console.log('🔥 --- error', err);
+    error = 'Something went wrong';
     if (err instanceof Error) {
       error = err.message;
     }
