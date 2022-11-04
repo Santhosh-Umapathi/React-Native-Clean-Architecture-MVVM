@@ -1,5 +1,5 @@
-import {TUser} from 'types/User.types';
-import {UsersApi} from 'Data/source';
+import {UsersApi} from '../../Data/source';
+import {TUser} from '../../types/User.types';
 
 export const getUsers = async () => {
   return await UsersApi.getAll();

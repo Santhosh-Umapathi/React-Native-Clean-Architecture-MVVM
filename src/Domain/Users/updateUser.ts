@@ -1,5 +1,5 @@
-import {UsersRepository} from 'Data/repository';
-import {TUser} from 'types/User.types';
+import {UsersRepository} from '../../Data/repository';
+import {TUser} from '../../types/User.types';
 
 export default async (id: string, payload: TUser) => {
   let results, error;

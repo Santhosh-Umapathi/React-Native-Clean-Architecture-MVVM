@@ -1,4 +1,4 @@
-import {TUser, TUsers} from 'types/User.types';
+import {TUser, TUsers} from '../../../types/User.types';
 import userDb from './json/user.json';
 import usersDb from './json/users.json';
 

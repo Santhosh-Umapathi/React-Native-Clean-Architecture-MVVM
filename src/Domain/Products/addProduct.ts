@@ -1,5 +1,5 @@
-import {ProductsRepository} from 'Data/repository';
-import {TProduct} from 'types/Product.types';
+import {ProductsRepository} from '../../Data/repository';
+import {TProduct} from '../../types/Product.types';
 
 export default async (payload: TProduct) => {
   let results, error;

@@ -1,4 +1,4 @@
-import {TUser, TUsers} from 'types/User.types';
+import {TUser, TUsers} from '../../../types/User.types';
 import mockUser from './json/mockUser.json';
 import mockUsers from './json/mockUsers.json';
 

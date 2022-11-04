@@ -1,4 +1,4 @@
-import {UsersRepository} from 'Data/repository';
+import {UsersRepository} from '../../Data/repository';
 
 export default async (id: string) => {
   let results, error;
