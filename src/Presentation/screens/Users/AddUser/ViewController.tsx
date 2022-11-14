@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import jsonData from '../../../../Data/source/Users/json/user.json';
-import {addUser, deleteUser, updateUser} from '../../../../Domain/Users';
+import {addUser, deleteUser, updateUser} from '../../../../domain/Users';
 import TProps from './types';
 import useAddUserViewModel from './ViewModel';
 

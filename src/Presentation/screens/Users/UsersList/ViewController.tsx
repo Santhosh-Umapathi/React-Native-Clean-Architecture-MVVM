@@ -1,7 +1,7 @@
 import {useCallback} from 'react';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {getUsers} from '../../../../Domain/Users';
+import {getUsers} from '../../../../domain/Users';
 import {UsersStackParamList} from '../../../navigation/UsersStack';
 import TProps from './types';
 import useUsersListViewModel from './ViewModel';

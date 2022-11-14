@@ -1,5 +1,5 @@
 import {useCallback} from 'react';
-import {getProducts} from 'src/Domain/Products';
+import {getProducts} from 'src/domain/Products';
 import {ProductsStackParamList} from 'src/Presentation/navigation/ProductsStack';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';

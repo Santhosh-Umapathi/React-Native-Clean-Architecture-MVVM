@@ -1,3 +1,3 @@
 import api from './apiConfig';
 
-export {api};
+  export {api};
