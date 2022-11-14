@@ -1,6 +1,6 @@
 import {useCallback, useState} from 'react';
 import {addProduct, deleteProduct, updateProduct} from 'src/domain/Products';
-import jsonData from '../../../../Data/source/Products/json/Product.json';
+import jsonData from '../../../../data/source/Products/json/Product.json';
 import TProps from './types';
 import useAddProductViewModel from './ViewModel';
 

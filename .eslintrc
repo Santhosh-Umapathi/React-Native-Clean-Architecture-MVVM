@@ -12,10 +12,6 @@
   ],
   "rules": {
     "semi": ["error", "always"],
-    "no-relative-import-paths/no-relative-import-paths": [
-      "warn",
-      {"allowSameFolder": true, "rootDir": "src"}
-    ],
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "error",
