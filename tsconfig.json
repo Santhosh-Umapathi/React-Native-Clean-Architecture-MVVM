@@ -34,7 +34,7 @@
       "@bottomSheets": ["src/components/bottomSheets"],
       "@config": ["src/config"],
       "@constants": ["src/constants"],
-      "@data": ["src/data"],
+      "@data": ["src/ddata"],
       "@helpers": ["src/helpers"],
       "@hooks": ["src/hooks"],
       "@state": ["src/recoil/hooks"],
@@ -42,7 +42,7 @@
       "@screens": ["src/screens"],
       "@storage": ["src/storage"],
       "@theme": ["src/theme"],
-      "@type/*": ["src/types/*"],
+      "@type/*": ["src/dtypes/*"],
       "@env": ["src/env"],
       "@atoms": ["src/recoil/atoms"]
     }

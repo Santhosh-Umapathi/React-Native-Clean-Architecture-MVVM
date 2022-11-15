@@ -1,3 +1,3 @@
-import api from './apiConfig';
+import BASE_URL from './apiConfig';
 
-export {api};
+export {BASE_URL};
