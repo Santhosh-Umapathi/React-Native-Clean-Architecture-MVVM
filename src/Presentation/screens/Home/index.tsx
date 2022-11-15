@@ -4,8 +4,8 @@ import styles from './styles';
 import TProps from './types';
 import useHomeViewController from './ViewController';
 
-const Home: FC<TProps> = ({navigation}) => {
-  const {onProductsPress, onUsersPress} = useHomeViewController(navigation);
+const Home: FC<TProps> = ({}) => {
+  const {onProductsPress, onUsersPress} = useHomeViewController();
 
   return (
     <View style={styles.container}>

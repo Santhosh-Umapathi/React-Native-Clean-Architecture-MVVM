@@ -1,6 +1,3 @@
-import type {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../navigation/MainStack';
-
-type TProps = {} & NativeStackScreenProps<RootStackParamList, 'Home'>;
+type TProps = {};
 
 export default TProps;

@@ -1,9 +1,8 @@
 import {useEffect} from 'react';
 import TodoApiImpl from '../../../data/source/api/TodoApiImpl';
 import GetTodoUseCase from '../../../domain/usecase/Todo/getTodos';
-import TProps from './types';
 
-const useHomeViewController = (navigation: TProps['navigation']) => {
+const useHomeViewController = () => {
   const UseCase = new GetTodoUseCase(new TodoApiImpl());
 
   const getTodos = async () => {
@@ -21,11 +20,11 @@ const useHomeViewController = (navigation: TProps['navigation']) => {
   }, []);
 
   const onUsersPress = () => {
-    navigation.navigate('UsersStack');
+    console.log('user press');
   };
 
   const onProductsPress = () => {
-    navigation.navigate('ProductsStack');
+    console.log('product press');
   };
 
   return {onUsersPress, onProductsPress};
