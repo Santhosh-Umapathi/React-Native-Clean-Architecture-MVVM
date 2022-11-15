@@ -6,3 +6,4 @@ Steps
 4. Create Data/Source/Api/ApiImplementation
 5. Create Domain/Repository
 6. Create Domain/UseCase/1/UseCaseImplementation
+7. Create View model, declare the new use case with new api implementation
