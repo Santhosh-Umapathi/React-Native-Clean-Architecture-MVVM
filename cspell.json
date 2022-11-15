@@ -16,7 +16,8 @@
     "Pressable",
     "recrypt",
     "svgr",
-    "Todos"
+    "Todos",
+    "usecase"
   ]
   /* 
     flagWords - list of words to be always considered incorrect
