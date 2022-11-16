@@ -5,5 +5,6 @@
 3. Created domain/models/interfaces
 4. Created domain/entities/ use cases creation
 5. Create domain/errors for use cases creation
-6. Create domain/use cases/ interfaces creation for executing use cases
-7. Create domain/repository/ interfaces for all the use cases
+6. Create domain/use cases/ interfaces creation for executing use cases and entity
+7. Create domain/repository/ interfaces for all the use cases and entity
+8. Create domain/implementations for use cases with repository and entity.
