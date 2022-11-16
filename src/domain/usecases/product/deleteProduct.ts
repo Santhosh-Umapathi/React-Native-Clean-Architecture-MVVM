@@ -1,5 +1,5 @@
-import {IProduct} from '../../model';
+import {ProductEntity} from '../../entities';
 
 export interface DeleteProductUseCase {
-  execute: (id: IProduct['id']) => Promise<IProduct>;
+  execute: (id: ProductEntity['id']) => Promise<ProductEntity>;
 }

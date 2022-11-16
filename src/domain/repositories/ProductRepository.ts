@@ -1,9 +1,9 @@
-import {IProduct, IProducts} from '../model';
+import {ProductEntity, ProductsEntity} from '../entities';
 
 export interface ProductRepository {
-  addProduct: (data: IProduct) => Promise<IProduct>;
-  deleteProduct: (id: IProduct['id']) => Promise<IProduct>;
-  getProduct: (id: IProduct['id']) => Promise<IProduct>;
-  getProducts: () => Promise<IProducts>;
-  updateProduct: (data: IProduct) => Promise<IProduct>;
+  addProduct: (data: ProductEntity) => Promise<ProductEntity>;
+  deleteProduct: (id: ProductEntity['id']) => Promise<ProductEntity>;
+  getProduct: (id: ProductEntity['id']) => Promise<ProductEntity>;
+  getProducts: () => Promise<ProductsEntity>;
+  updateProduct: (data: ProductEntity) => Promise<ProductEntity>;
 }

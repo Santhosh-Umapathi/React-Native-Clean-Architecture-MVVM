@@ -1,5 +1,5 @@
-import {IUser} from '../../model';
+import {UserEntity} from '../../entities';
 
 export interface AddUserUseCase {
-  execute: (data: IUser) => Promise<IUser>;
+  execute: (data: UserEntity) => Promise<UserEntity>;
 }

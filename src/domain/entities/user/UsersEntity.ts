@@ -1,5 +1,4 @@
-import {IUser} from '../model/User';
-import {IUsers} from '../model/Users';
+import {IUser, IUsers} from '../../model';
 
 export class UsersEntity implements IUsers {
   users: IUser[];

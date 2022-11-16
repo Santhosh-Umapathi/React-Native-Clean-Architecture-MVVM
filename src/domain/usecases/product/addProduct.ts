@@ -1,5 +1,5 @@
-import {IProduct} from '../../model';
+import {ProductEntity} from '../../entities';
 
 export interface AddProductUseCase {
-  execute: (data: IProduct) => Promise<IProduct>;
+  execute: (data: ProductEntity) => Promise<ProductEntity>;
 }

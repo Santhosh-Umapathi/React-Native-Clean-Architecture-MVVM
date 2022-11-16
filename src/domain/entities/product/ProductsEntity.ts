@@ -1,5 +1,4 @@
-import {IProduct} from '../model/Product';
-import {IProducts} from '../model/Products';
+import {IProduct, IProducts} from '../../model';
 
 export class ProductsEntity implements IProducts {
   products: IProduct[];

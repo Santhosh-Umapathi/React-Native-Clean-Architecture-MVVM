@@ -1,9 +1,9 @@
-import {IUser, IUsers} from '../model';
+import {UserEntity, UsersEntity} from '../entities';
 
 export interface UserRepository {
-  addUser: (data: IUser) => Promise<IUser>;
-  deleteUser: (id: IUser['id']) => Promise<IUser>;
-  getUser: (id: IUser['id']) => Promise<IUser>;
-  getUsers: () => Promise<IUsers>;
-  updateUser: (data: IUser) => Promise<IUser>;
+  addUser: (data: UserEntity) => Promise<UserEntity>;
+  deleteUser: (id: UserEntity['id']) => Promise<UserEntity>;
+  getUser: (id: UserEntity['id']) => Promise<UserEntity>;
+  getUsers: () => Promise<UsersEntity>;
+  updateUser: (data: UserEntity) => Promise<UserEntity>;
 }

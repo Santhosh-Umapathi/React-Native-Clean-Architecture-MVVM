@@ -1,4 +1,4 @@
-import {IProduct} from '../model/Product';
+import {IProduct} from '../../model';
 
 export class ProductEntity implements IProduct {
   id: number;

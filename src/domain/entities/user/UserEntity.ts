@@ -1,4 +1,4 @@
-import {IAddress, IBank, ICompany, IHair, IUser} from '../model/User';
+import {IAddress, IBank, ICompany, IHair, IUser} from '../../model';
 
 export class UserEntity implements IUser {
   id: number;

@@ -1,5 +1,5 @@
-import {IUser} from '../../model';
+import {UserEntity} from '../../entities';
 
 export interface GetUserUseCase {
-  execute: (id: IUser['id']) => Promise<IUser>;
+  execute: (id: UserEntity['id']) => Promise<UserEntity>;
 }
