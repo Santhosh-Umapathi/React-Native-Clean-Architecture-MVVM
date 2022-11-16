@@ -1,4 +1,3 @@
-import {Http} from 'src/data/network';
 import {HttpManager} from 'src/data/network/interfaces/HttpManager';
 import {COLLECTIONS} from '../../../config/apiConfig';
 import {ProductEntity} from '../../entities/product/ProductEntity';
@@ -15,8 +14,8 @@ import {ProductRepository} from '../../repositories';
 export class ProductRepositoryImpl implements ProductRepository {
   private http: HttpManager;
 
-  constructor() {
-    this.http = new Http();
+  constructor(http: HttpManager) {
+    this.http = http;
   }
 
   addProduct = async (data: ProductEntity): Promise<ProductEntity> => {

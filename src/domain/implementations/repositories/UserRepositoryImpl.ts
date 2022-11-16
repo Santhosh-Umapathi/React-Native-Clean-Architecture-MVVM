@@ -1,4 +1,3 @@
-import {Http} from 'src/data/network';
 import {HttpManager} from 'src/data/network/interfaces/HttpManager';
 import {COLLECTIONS} from '../../../config/apiConfig';
 import {UserEntity} from '../../entities/user/UserEntity';
@@ -15,8 +14,8 @@ import {UserRepository} from '../../repositories';
 export class UserRepositoryImpl implements UserRepository {
   private http: HttpManager;
 
-  constructor() {
-    this.http = new Http();
+  constructor(http: HttpManager) {
+    this.http = http;
   }
 
   addUser = async (data: UserEntity): Promise<UserEntity> => {
