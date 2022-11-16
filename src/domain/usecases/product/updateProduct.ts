@@ -1,5 +1,8 @@
 import {ProductEntity} from '../../entities';
 
 export interface UpdateProductUseCase {
-  execute: (data: ProductEntity) => Promise<ProductEntity>;
+  execute: (
+    id: ProductEntity['id'],
+    data: ProductEntity,
+  ) => Promise<ProductEntity>;
 }

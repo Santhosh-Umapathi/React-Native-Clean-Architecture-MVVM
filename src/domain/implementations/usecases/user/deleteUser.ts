@@ -1,7 +1,7 @@
-import {UserEntity} from '../../entities';
-import {DeleteUserError} from '../../errors';
-import {UserRepository} from '../../repositories';
-import {DeleteUserUseCase} from '../../usecases';
+import {UserEntity} from '../../../entities';
+import {DeleteUserError} from '../../../errors';
+import {UserRepository} from '../../../repositories';
+import {DeleteUserUseCase} from '../../../usecases';
 
 export class DeleteUserImplementation implements DeleteUserUseCase {
   private userRepository: UserRepository;

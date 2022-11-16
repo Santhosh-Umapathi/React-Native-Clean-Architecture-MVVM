@@ -1,5 +1,5 @@
 import {UserEntity} from '../../entities';
 
 export interface UpdateUserUseCase {
-  execute: (data: UserEntity) => Promise<UserEntity>;
+  execute: (id: UserEntity['id'], data: UserEntity) => Promise<UserEntity>;
 }

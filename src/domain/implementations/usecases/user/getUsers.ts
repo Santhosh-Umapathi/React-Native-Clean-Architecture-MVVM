@@ -1,6 +1,6 @@
-import {GetUsersError} from '../../errors';
-import {UserRepository} from '../../repositories';
-import {GetUsersUseCase} from '../../usecases';
+import {GetUsersError} from '../../../errors';
+import {UserRepository} from '../../../repositories';
+import {GetUsersUseCase} from '../../../usecases';
 
 export class GetUsersImplementation implements GetUsersUseCase {
   private userRepository: UserRepository;

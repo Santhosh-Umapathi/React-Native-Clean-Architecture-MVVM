@@ -5,5 +5,5 @@ export interface UserRepository {
   deleteUser: (id: UserEntity['id']) => Promise<UserEntity>;
   getUser: (id: UserEntity['id']) => Promise<UserEntity>;
   getUsers: () => Promise<UsersEntity>;
-  updateUser: (data: UserEntity) => Promise<UserEntity>;
+  updateUser: (id: UserEntity['id'], data: UserEntity) => Promise<UserEntity>;
 }

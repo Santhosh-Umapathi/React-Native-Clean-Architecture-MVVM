@@ -1,7 +1,7 @@
-import {UserEntity} from '../../entities';
-import {AddUserError} from '../../errors';
-import {UserRepository} from '../../repositories';
-import {AddUserUseCase} from '../../usecases';
+import {UserEntity} from '../../../entities';
+import {AddUserError} from '../../../errors';
+import {UserRepository} from '../../../repositories';
+import {AddUserUseCase} from '../../../usecases';
 
 export class AddUserImplementation implements AddUserUseCase {
   private userRepository: UserRepository;

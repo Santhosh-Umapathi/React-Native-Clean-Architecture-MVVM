@@ -1,7 +1,7 @@
-import {ProductEntity} from '../../entities';
-import {DeleteProductError} from '../../errors';
-import {ProductRepository} from '../../repositories';
-import {DeleteProductUseCase} from '../../usecases';
+import {ProductEntity} from '../../../entities';
+import {DeleteProductError} from '../../../errors';
+import {ProductRepository} from '../../../repositories';
+import {DeleteProductUseCase} from '../../../usecases';
 
 export class DeleteProductImplementation implements DeleteProductUseCase {
   private productRepository: ProductRepository;

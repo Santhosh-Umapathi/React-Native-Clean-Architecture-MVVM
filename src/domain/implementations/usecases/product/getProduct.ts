@@ -1,7 +1,7 @@
-import {ProductEntity} from '../../entities';
-import {GetProductError} from '../../errors';
-import {ProductRepository} from '../../repositories';
-import {GetProductUseCase} from '../../usecases';
+import {ProductEntity} from '../../../entities';
+import {GetProductError} from '../../../errors';
+import {ProductRepository} from '../../../repositories';
+import {GetProductUseCase} from '../../../usecases';
 
 export class GetProductImplementation implements GetProductUseCase {
   private productRepository: ProductRepository;

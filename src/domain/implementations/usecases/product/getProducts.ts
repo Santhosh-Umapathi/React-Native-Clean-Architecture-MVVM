@@ -1,6 +1,6 @@
-import {GetProductsError} from '../../errors';
-import {ProductRepository} from '../../repositories';
-import {GetProductsUseCase} from '../../usecases';
+import {GetProductsError} from '../../../errors';
+import {ProductRepository} from '../../../repositories';
+import {GetProductsUseCase} from '../../../usecases';
 
 export class GetProductsImplementation implements GetProductsUseCase {
   private productRepository: ProductRepository;
