@@ -32,7 +32,7 @@ export interface IHair {
 }
 
 export interface IUser {
-  id: number;
+  id?: number;
   firstName: string;
   lastName: string;
   maidenName: string;

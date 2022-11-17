@@ -20,7 +20,7 @@ const useAddProductViewModel = () => {
 
   const editProductHandler = (payload: ProductEntity) => {
     const oldState = [...state.products.products];
-    const index = oldState.findIndex(i => i.id === payload.id);
+    const index = oldState.findIndex(i => payload.id && i.id === +payload.id);
 
     oldState[index] = payload;
 

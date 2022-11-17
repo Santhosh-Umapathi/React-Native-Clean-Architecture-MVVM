@@ -20,7 +20,8 @@ export class ProductRepositoryImpl implements ProductRepository {
 
   addProduct = async (data: ProductEntity): Promise<ProductEntity> => {
     try {
-      const response = await this.http.post(COLLECTIONS.product + '/add', data);
+      const response = await this.http.post(`${COLLECTIONS.product}/add`, data);
+
       return response;
     } catch (error) {
       throw new AddProductError();
@@ -29,7 +30,7 @@ export class ProductRepositoryImpl implements ProductRepository {
 
   deleteProduct = async (id: ProductEntity['id']): Promise<ProductEntity> => {
     try {
-      const response = await this.http.delete(COLLECTIONS.product + id);
+      const response = await this.http.delete(`${COLLECTIONS.product}/${id}`);
       return response;
     } catch (error) {
       throw new DeleteProductError();
@@ -38,7 +39,7 @@ export class ProductRepositoryImpl implements ProductRepository {
 
   getProduct = async (id: ProductEntity['id']): Promise<ProductEntity> => {
     try {
-      const response = await this.http.get(COLLECTIONS.product + id);
+      const response = await this.http.get(`${COLLECTIONS.product}/${id}`);
       return response;
     } catch (error) {
       throw new GetProductError();
@@ -59,7 +60,10 @@ export class ProductRepositoryImpl implements ProductRepository {
     data: ProductEntity,
   ): Promise<ProductEntity> => {
     try {
-      const response = await this.http.put(COLLECTIONS.product + id, data);
+      const response = await this.http.put(
+        `${COLLECTIONS.product}/${id}`,
+        data,
+      );
       return response;
     } catch (error) {
       throw new UpdateProductError();

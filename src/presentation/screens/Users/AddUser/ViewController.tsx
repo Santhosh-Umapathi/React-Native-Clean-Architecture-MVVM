@@ -39,23 +39,26 @@ const useAddUserViewController = ({navigation, route}: TProps) => {
   };
 
   const editHandler = async () => {
-    const results = await User.updateUser.execute(user!.id, {
-      ...jsonData,
-      id: user!.id,
-      firstName,
-      domain: address,
-      image: 'https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg',
-    });
-    results && editUserHandler(results);
+    if (user?.id) {
+      const results = await User.updateUser.execute(user.id, {
+        ...jsonData,
+        id: undefined,
+        firstName,
+        domain: address,
+        image: 'https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg',
+      });
+      results && editUserHandler(results);
 
-    navigation.goBack();
+      navigation.goBack();
+    }
   };
 
   const deleteHandler = async () => {
-    const results = await User.deleteUser.execute(user!.id);
-    results && deleteUserHandler(results);
-
-    navigation.goBack();
+    if (user?.id) {
+      const results = await User.deleteUser.execute(user.id);
+      results && deleteUserHandler(results);
+      navigation.goBack();
+    }
   };
 
   return {

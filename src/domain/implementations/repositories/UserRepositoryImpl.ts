@@ -20,7 +20,7 @@ export class UserRepositoryImpl implements UserRepository {
 
   addUser = async (data: UserEntity): Promise<UserEntity> => {
     try {
-      const response = await this.http.post(COLLECTIONS.user + '/add', data);
+      const response = await this.http.post(`${COLLECTIONS.user}/add`, data);
       return response;
     } catch (error) {
       throw new AddUserError();
@@ -29,7 +29,7 @@ export class UserRepositoryImpl implements UserRepository {
 
   deleteUser = async (id: UserEntity['id']): Promise<UserEntity> => {
     try {
-      const response = await this.http.delete(COLLECTIONS.user + id);
+      const response = await this.http.delete(`${COLLECTIONS.user}/${id}`);
       return response;
     } catch (error) {
       throw new DeleteUserError();
@@ -38,7 +38,7 @@ export class UserRepositoryImpl implements UserRepository {
 
   getUser = async (id: UserEntity['id']): Promise<UserEntity> => {
     try {
-      const response = await this.http.get(COLLECTIONS.user + id);
+      const response = await this.http.get(`${COLLECTIONS.user}/${id}`);
       return response;
     } catch (error) {
       throw new GetUserError();
@@ -59,7 +59,7 @@ export class UserRepositoryImpl implements UserRepository {
     data: UserEntity,
   ): Promise<UserEntity> => {
     try {
-      const response = await this.http.put(COLLECTIONS.user + id, data);
+      const response = await this.http.put(`${COLLECTIONS.user}/${id}`, data);
       return response;
     } catch (error) {
       throw new UpdateUserError();

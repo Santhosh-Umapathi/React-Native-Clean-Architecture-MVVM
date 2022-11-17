@@ -1,7 +1,7 @@
 import {IProduct} from '../../model';
 
 export class ProductEntity implements IProduct {
-  id: number;
+  id: number | undefined;
   title: string;
   description: string;
   price: number;
@@ -14,7 +14,7 @@ export class ProductEntity implements IProduct {
   images: string[];
 
   constructor(
-    id: number,
+    id: number | undefined,
     title: string,
     description: string,
     price: number,
@@ -40,7 +40,7 @@ export class ProductEntity implements IProduct {
   }
 
   static create = (
-    id: number,
+    id: number | undefined,
     title: string,
     description: string,
     price: number,

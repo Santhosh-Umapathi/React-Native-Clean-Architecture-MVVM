@@ -1,7 +1,7 @@
 import {IAddress, IBank, ICompany, IHair, IUser} from '../../model';
 
 export class UserEntity implements IUser {
-  id: number;
+  id: number | undefined;
   firstName: string;
   lastName: string;
   maidenName: string;
@@ -30,7 +30,7 @@ export class UserEntity implements IUser {
   userAgent: string;
 
   constructor(
-    id: number,
+    id: number | undefined,
     firstName: string,
     lastName: string,
     maidenName: string,
@@ -88,7 +88,7 @@ export class UserEntity implements IUser {
   }
 
   static create = (
-    id: number,
+    id: number | undefined,
     firstName: string,
     lastName: string,
     maidenName: string,

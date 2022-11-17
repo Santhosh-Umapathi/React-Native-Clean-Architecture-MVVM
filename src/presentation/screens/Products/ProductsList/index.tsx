@@ -14,13 +14,13 @@ const ProductsList = () => {
       renderItem={({item, index}) => {
         return (
           <TouchableOpacity
-            onPress={() => onPressItem(item.id)}
+            onPress={() => item.id && onPressItem(item.id)}
             style={styles.userCard}
           >
             <Image
               source={{
                 uri:
-                  item.images[0] ||
+                  (item.images && item.images[0]) ||
                   'https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg',
               }}
               style={styles.image}

@@ -5,6 +5,7 @@ import axios, {
   AxiosResponse,
 } from 'axios';
 import {BASE_URL} from '@config';
+import {HEADERS} from '../../../config/apiConfig';
 import {HttpManager} from '../interfaces/HttpManager';
 
 export class Http implements HttpManager {
@@ -13,6 +14,7 @@ export class Http implements HttpManager {
   constructor() {
     this.http = axios.create({
       baseURL: BASE_URL,
+      headers: HEADERS,
     });
 
     //Incase of modifying configs later
@@ -40,7 +42,7 @@ export class Http implements HttpManager {
   };
 
   // Response Interceptors
-  private onResponseFulfilled = (response: AxiosResponse): AxiosResponse => {
+  private onResponseFulfilled = (response: AxiosResponse) => {
     return response.data;
   };
 
@@ -64,6 +66,7 @@ export class Http implements HttpManager {
   //POST request implementation
   post = async (url: string, payload: object): Promise<AxiosResponse> => {
     const stringPayload = JSON.stringify(payload);
+
     return this.http.post(url, stringPayload);
   };
 

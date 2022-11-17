@@ -46,25 +46,30 @@ const useAddProductViewController = ({navigation, route}: TProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [title, description]);
 
-  const editHandler = useCallback(async () => {
-    const results = await Product.updateProduct.execute(product!.id, {
-      ...jsonData,
-      id: product!.id,
-      title,
-      description,
-      images: ['https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg'],
-    });
-    results && editProductHandler(results);
+  const editHandler = async () => {
+    if (product?.id) {
+      const results = await Product.updateProduct.execute(product.id, {
+        ...jsonData,
+        id: undefined,
+        title,
+        description,
+        images: ['https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg'],
+      });
+
+      results && editProductHandler(results);
+    }
 
     navigation.goBack();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [title, description]);
+  };
 
   const deleteHandler = async () => {
-    const results = await Product.deleteProduct.execute(product!.id);
-    results && deleteProductHandler(results);
+    if (product?.id) {
+      const results = await Product.deleteProduct.execute(product.id);
 
-    navigation.goBack();
+      results && deleteProductHandler(results);
+
+      navigation.goBack();
+    }
   };
 
   return {
