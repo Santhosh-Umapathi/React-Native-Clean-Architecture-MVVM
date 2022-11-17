@@ -13,7 +13,10 @@ const useAddProductViewController = ({navigation, route}: TProps) => {
   } = useAddProductViewModel();
 
   const id = route?.params?.id;
-  const product = products.products.find(i => i.id === id);
+
+  const product = products.products.find(i => {
+    return id && i.id === +id;
+  });
 
   if (product) {
     navigation.setOptions({title: 'Edit Product'});

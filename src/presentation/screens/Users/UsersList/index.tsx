@@ -1,10 +1,9 @@
 import React from 'react';
 import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
-import TProps from './types';
 import useUsersListViewController from './ViewController';
 
-const UsersList = (props: TProps) => {
+const UsersList = () => {
   const {users, onPressItem} = useUsersListViewController();
 
   return (
@@ -15,7 +14,7 @@ const UsersList = (props: TProps) => {
       renderItem={({item}) => {
         return (
           <TouchableOpacity
-            onPress={() => onPressItem(String(item.id))}
+            onPress={() => onPressItem(item.id)}
             style={styles.userCard}
           >
             <Image

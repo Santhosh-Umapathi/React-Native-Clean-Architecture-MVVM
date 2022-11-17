@@ -29,12 +29,12 @@ const useAddUserViewController = ({navigation, route}: TProps) => {
   const saveHandler = async () => {
     const results = await User.addUser.execute({
       ...jsonData,
+      id: users.users.length + 1,
       firstName,
       domain: address,
       image: 'https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg',
     });
     results && addUserHandler(results);
-
     navigation.goBack();
   };
 
