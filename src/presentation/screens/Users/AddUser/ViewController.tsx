@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import jsonData from '../../../../ddata/source/Users/json/user.json';
-import {addUser, deleteUser, updateUser} from '../../../../dDomain/Users';
+import {User} from '../../../../di/instantiate';
+import jsonData from '../../../../mock/user.json';
 import TProps from './types';
 import useAddUserViewModel from './ViewModel';
 
@@ -9,7 +9,7 @@ const useAddUserViewController = ({navigation, route}: TProps) => {
     useAddUserViewModel();
 
   const id = route?.params?.id;
-  const user = users.users.find(i => String(i.id) === id);
+  const user = users.users.find(i => i.id === id);
 
   if (user) {
     navigation.setOptions({title: 'Edit User'});
@@ -27,7 +27,7 @@ const useAddUserViewController = ({navigation, route}: TProps) => {
   };
 
   const saveHandler = async () => {
-    const {results} = await addUser({
+    const results = await User.addUser.execute({
       ...jsonData,
       firstName,
       domain: address,
@@ -39,9 +39,9 @@ const useAddUserViewController = ({navigation, route}: TProps) => {
   };
 
   const editHandler = async () => {
-    const {results} = await updateUser(String(user?.id), {
+    const results = await User.updateUser.execute(user!.id, {
       ...jsonData,
-      id: String(user?.id),
+      id: user!.id,
       firstName,
       domain: address,
       image: 'https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg',
@@ -52,7 +52,7 @@ const useAddUserViewController = ({navigation, route}: TProps) => {
   };
 
   const deleteHandler = async () => {
-    const {results} = await deleteUser(String(user?.id));
+    const results = await User.deleteUser.execute(user!.id);
     results && deleteUserHandler(results);
 
     navigation.goBack();

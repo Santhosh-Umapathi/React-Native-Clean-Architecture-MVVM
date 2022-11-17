@@ -6,7 +6,7 @@ import useUsersListViewController from './ViewController';
 
 type TProps = {};
 
-export const NavigationHeader: FC<TProps> = props => {
+export const NavigationHeader: FC<TProps> = () => {
   const {onPressAdd} = useUsersListViewController();
 
   return (

@@ -1,6 +1,6 @@
 import {useCallback, useState} from 'react';
-import {addProduct, deleteProduct, updateProduct} from 'src/dDomain/Products';
-import jsonData from '../../../../ddata/source/Products/json/Product.json';
+import {Product} from '../../../../di/instantiate';
+import jsonData from '../../../../mock/product.json';
 import TProps from './types';
 import useAddProductViewModel from './ViewModel';
 
@@ -13,7 +13,7 @@ const useAddProductViewController = ({navigation, route}: TProps) => {
   } = useAddProductViewModel();
 
   const id = route?.params?.id;
-  const product = products.products.find(i => String(i.id) === id);
+  const product = products.products.find(i => i.id === id);
 
   if (product) {
     navigation.setOptions({title: 'Edit Product'});
@@ -31,7 +31,7 @@ const useAddProductViewController = ({navigation, route}: TProps) => {
   };
 
   const saveHandler = useCallback(async () => {
-    const {results} = await addProduct({
+    const results = await Product.addProduct.execute({
       ...jsonData,
       title,
       description,
@@ -40,12 +40,13 @@ const useAddProductViewController = ({navigation, route}: TProps) => {
     results && addProductHandler(results);
 
     navigation.goBack();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [title, description]);
 
   const editHandler = useCallback(async () => {
-    const {results} = await updateProduct(String(product?.id), {
+    const results = await Product.updateProduct.execute(product!.id, {
       ...jsonData,
-      id: String(product?.id),
+      id: product!.id,
       title,
       description,
       images: ['https://images.hdqwalls.com/wallpapers/react-js-logo-no.jpg'],
@@ -53,10 +54,11 @@ const useAddProductViewController = ({navigation, route}: TProps) => {
     results && editProductHandler(results);
 
     navigation.goBack();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [title, description]);
 
   const deleteHandler = async () => {
-    const {results} = await deleteProduct(String(product?.id));
+    const results = await Product.deleteProduct.execute(product!.id);
     results && deleteProductHandler(results);
 
     navigation.goBack();

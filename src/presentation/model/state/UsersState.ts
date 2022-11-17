@@ -1,7 +1,7 @@
 import {atom} from 'recoil';
-import {TUsers} from '../../../dtypes/User.types';
+import {UsersEntity} from '../../../domain/entities';
 
-export const users = atom<TUsers>({
+export const users = atom<UsersEntity>({
   key: 'users',
   default: {
     users: [],

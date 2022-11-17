@@ -1,11 +1,11 @@
 import {useRecoilState} from 'recoil';
-import {TUsers} from 'src/dtypes/User.types';
+import {UsersEntity} from '../../../domain/entities';
 import {UsersState} from '../state';
 
 export default () => {
   const [users, updateUsers] = useRecoilState(UsersState.users);
 
-  const setUsers = (payload: TUsers) => {
+  const setUsers = (payload: UsersEntity) => {
     updateUsers(payload);
   };
 

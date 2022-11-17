@@ -1,7 +1,7 @@
 import {atom} from 'recoil';
-import {TProducts} from '../../../dtypes/Product.types';
+import {ProductsEntity} from '../../../domain/entities';
 
-export const products = atom<TProducts>({
+export const products = atom<ProductsEntity>({
   key: 'products',
   default: {
     products: [],

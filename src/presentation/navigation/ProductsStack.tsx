@@ -5,7 +5,7 @@ import {NavigationHeader} from '../screens/Products/ProductsList/NavigationHeade
 
 export type ProductsStackParamList = {
   ProductsList: undefined;
-  AddProduct: {id?: string};
+  AddProduct: {id?: number};
 };
 const Stack = createNativeStackNavigator<ProductsStackParamList>();
 

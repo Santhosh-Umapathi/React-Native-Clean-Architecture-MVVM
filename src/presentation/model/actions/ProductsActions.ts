@@ -1,12 +1,11 @@
 import {useRecoilState} from 'recoil';
-import {TProducts} from 'src/dtypes/Product.types';
+import {ProductsEntity} from '../../../domain/entities';
 import {ProductsState} from '../state';
 
 export default () => {
   const [products, updateProducts] = useRecoilState(ProductsState.products);
 
-  const setProducts = (payload: TProducts) => {
-    console.log('🔥 --- setProducts --- payload', payload.products[1]);
+  const setProducts = (payload: ProductsEntity) => {
     updateProducts(payload);
   };
 

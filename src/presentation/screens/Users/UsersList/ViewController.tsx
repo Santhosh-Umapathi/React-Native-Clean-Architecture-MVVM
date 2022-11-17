@@ -1,9 +1,8 @@
 import {useCallback} from 'react';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {getUsers} from '../../../../dDomain/Users';
+import {User} from '../../../../di/instantiate';
 import {UsersStackParamList} from '../../../navigation/UsersStack';
-import TProps from './types';
 import useUsersListViewModel from './ViewModel';
 
 const useUsersListViewController = () => {
@@ -15,17 +14,18 @@ const useUsersListViewController = () => {
     >();
 
   const getUsersCallback = async () => {
-    const {results} = await getUsers();
+    const results = await User.getUsers.execute();
     results && updateUsers(results);
   };
 
   useFocusEffect(
     useCallback(() => {
       users.users.length < 1 && getUsersCallback();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [users.users.length]),
   );
 
-  const onPressItem = (id: string) => {
+  const onPressItem = (id: number) => {
     navigate('AddUser', {id});
   };
 

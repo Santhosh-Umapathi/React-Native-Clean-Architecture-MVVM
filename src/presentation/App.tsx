@@ -5,7 +5,7 @@ import MainNavigator from './navigation';
 const App = () => {
   return (
     <RecoilRoot>
-      <></>
+      <MainNavigator />
     </RecoilRoot>
   );
 };

@@ -1,29 +1,28 @@
-import {TUser, TUsers} from 'src/dtypes/User.types';
+import {UserEntity, UsersEntity} from '../../../../domain/entities/user';
 import {actions as Actions} from '../../../model';
 
 const useAddUserViewModel = () => {
   const {state, actions} = Actions.UsersActions();
-  // console.log('🔥 --- useAddUserViewModel --- state', state.users.users);
 
-  const updateUsers = (payload: TUsers) => {
+  const updateUsers = (payload: UsersEntity) => {
     actions.setUsers(payload);
   };
 
-  const addUserHandler = (payload: TUser) => {
+  const addUserHandler = (payload: UserEntity) => {
     actions.setUsers({...state.users, users: [payload, ...state.users.users]});
   };
 
-  const editUserHandler = (payload: TUser) => {
+  const editUserHandler = (payload: UserEntity) => {
     const oldState = [...state.users.users];
-    const index = oldState.findIndex(i => String(i.id) === payload.id);
+    const index = oldState.findIndex(i => i.id === payload.id);
     oldState[index] = payload;
 
     actions.setUsers({...state.users, users: oldState});
   };
 
-  const deleteUserHandler = (payload: TUser) => {
+  const deleteUserHandler = (payload: UserEntity) => {
     const oldState = [...state.users.users];
-    const index = oldState.findIndex(i => String(i.id) === payload.id);
+    const index = oldState.findIndex(i => i.id === payload.id);
     oldState.splice(index, 1);
 
     actions.setUsers({...state.users, users: oldState});
