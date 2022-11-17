@@ -9,3 +9,6 @@
 7. Create domain/repository/ interfaces for all the use cases and entity
 8. Create domain/implementations for use cases with repository and entity.
 9. Create repositories/implementations
+10. Create di/interfaces for the use cases
+11. Create di/implementations for the use cases
+12. Instantiate di with all the above
